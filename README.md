@@ -64,8 +64,7 @@ This project contributes to the following **Sustainable Development Goals (SDGs)
 ## Installation
 
 1. Clone this repository:
-
-```bash
+    ```bash
 git clone https://github.com/YOUR_USERNAME/budget-ai-advisor.git
 cd budget-ai-advisor
 
