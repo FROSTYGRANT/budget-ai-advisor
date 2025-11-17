@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Expenses — Budget AI Advisor</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Expenses</h1>
+
+    <table class="expenses">
+      <thead>
+        <tr><th>Date</th><th>Name</th><th>Category</th><th>Amount (KES)</th></tr>
+      </thead>
+      <tbody>
+        {% for e in expenses %}
+        <tr>
+          <td>{{ e.date }}</td>
+          <td>{{ e.name }}</td>
+          <td>{{ e.category }}</td>
+          <td style="text-align:right;">{{ "%.2f"|format(e.amount) }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3" style="text-align:right;"><strong>Total:</strong></td>
+          <td style="text-align:right;"><strong>KES {{ "%.2f"|format(total) }}</strong></td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <div class="nav">
+      <a href="/">Add expense</a> |
+      <a href="/advice">Get AI savings advice</a>
+    </div>
+  </div>
+</body>
+</html>

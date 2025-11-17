@@ -1,0 +1,16 @@
+body { font-family: Arial, sans-serif; background:#f7f7f8; color:#222; margin:0; padding:20px; }
+.container{ max-width:760px; margin:0 auto; background:#fff; padding:20px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.05); }
+h1{ margin-top:0; }
+.form-card { display:grid; gap:8px; }
+.form-card input { padding:8px; border:1px solid #ddd; border-radius:4px; }
+.form-card button { padding:10px; border:none; background:#2b7cff; color:white; border-radius:6px; cursor:pointer; }
+.form-card button:hover { opacity:0.95; }
+.nav { margin-top:12px; }
+table.expenses { width:100%; border-collapse:collapse; margin-top:12px; }
+table.expenses th, table.expenses td { padding:8px 10px; border-bottom:1px solid #eee; }
+.advice-card { margin-top:12px; background:#fafafa; padding:12px; border-radius:6px; border:1px solid #eee; }
+.messages { list-style:none; padding:0; }
+.messages li { padding:8px; border-radius:4px; margin-bottom:8px; }
+.messages li.success { background:#e6f7ea; color:#1f7a3a; }
+.messages li.error { background:#fdecea; color:#8a1e1e; }
+pre { white-space:pre-wrap; font-family:inherit; }

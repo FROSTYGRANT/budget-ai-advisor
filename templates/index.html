@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Budget AI Advisor — Add Expense</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Budget AI Advisor</h1>
+    <p>Add an expense:</p>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul class="messages">
+        {% for category, msg in messages %}
+          <li class="{{ category }}">{{ msg }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    <form action="/add" method="post" class="form-card">
+      <label for="name">Expense name</label>
+      <input id="name" name="name" required>
+
+      <label for="amount">Amount (KES)</label>
+      <input id="amount" name="amount" required inputmode="decimal" placeholder="e.g., 250.00">
+
+      <label for="category">Category (e.g., Food, Transport)</label>
+      <input id="category" name="category" required>
+
+      <button type="submit">Add Expense</button>
+    </form>
+
+    <div class="nav">
+      <a href="/expenses">View expenses</a> |
+      <a href="/advice">Get AI savings advice</a>
+    </div>
+    <footer>
+      <small>SDG 1 & SDG 8 — Simple, beginner-friendly app.</small>
+    </footer>
+  </div>
+</body>
+</html>

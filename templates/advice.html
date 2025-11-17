@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AI Advice — Budget AI Advisor</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Savings Advice</h1>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul class="messages">
+        {% for category, msg in messages %}
+          <li class="{{ category }}">{{ msg }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    <form method="post">
+      <p>Click the button below to generate tailored savings tips from your stored expenses.</p>
+      <button type="submit">Get AI Advice</button>
+    </form>
+
+    {% if advice_text %}
+      <div class="advice-card">
+        <h3>AI recommendations</h3>
+        <pre>{{ advice_text }}</pre>
+      </div>
+    {% endif %}
+
+    <div class="nav">
+      <a href="/">Add expense</a> |
+      <a href="/expenses">View expenses</a>
+    </div>
+  </div>
+</body>
+</html>
