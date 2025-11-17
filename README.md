@@ -65,13 +65,12 @@ This project contributes to the following **Sustainable Development Goals (SDGs)
 
 1. Clone this repository:
     ```bash
-git clone https://github.com/YOUR_USERNAME/budget-ai-advisor.git
-cd budget-ai-advisor
+    git clone https://github.com/YOUR_USERNAME/budget-ai-advisor.git
+    cd budget-ai-advisor
 
 2. Create a Python virtual environment:
     python3 -m venv venv
-    source venv/bin/activate   # macOS/Linux
-    # venv\Scripts\activate    # Windows
+    source venv/bin/activate
 
 3. Install dependencies:
     pip install -r requirements.txt
@@ -82,7 +81,7 @@ cd budget-ai-advisor
 5. OPENAI_API_KEY=sk-...
     OPENAI_API_KEY=sk-...
 
-Database Setup:
+## Database Setup
 1. Start your MySQL server.
 2. Run the schema SQL file to create the database and table:
     mysql -u root -p < schema.sql
@@ -90,14 +89,14 @@ Database Setup:
 Database: budget_app
 Table: expenses
 
-Running the App:
+## Running the App
 1. Start Flask:
     flask run
 2. Open your browser:
     http://127.0.0.1:5000/
 3. You can now add expenses, view expense history, and request AI savings advice.
 
-Usage:
+## Usage
 1. Add an Expense: Enter expense name, amount, and category.
 2. View Expenses: Check the list of expenses and total spending.
 3. Get AI Advice: Click the button to get personalized savings suggestions.
