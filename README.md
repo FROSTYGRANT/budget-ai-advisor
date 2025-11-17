@@ -67,27 +67,20 @@ This project contributes to the following **Sustainable Development Goals (SDGs)
     ```bash
     git clone https://github.com/YOUR_USERNAME/budget-ai-advisor.git
     cd budget-ai-advisor
-
 2. Create a Python virtual environment:
     python3 -m venv venv
     source venv/bin/activate
-
-3. Install dependencies:
+4. Install dependencies:
     pip install -r requirements.txt
-
-4. Create .env file:
+5. Create .env file:
     cp .env.example .env
-
-5. OPENAI_API_KEY=sk-...
-    OPENAI_API_KEY=sk-...
+6. OPENAI_API_KEY=sk-...
 
 ## Database Setup
 1. Start your MySQL server.
 2. Run the schema SQL file to create the database and table:
     mysql -u root -p < schema.sql
     # Enter password: R00t
-Database: budget_app
-Table: expenses
 
 ## Running the App
 1. Start Flask:
@@ -101,14 +94,14 @@ Table: expenses
 2. View Expenses: Check the list of expenses and total spending.
 3. Get AI Advice: Click the button to get personalized savings suggestions.
 
-Screenshots:
+## Screenshots
 /screenshots
 
-Notes:
+## Notes
 - .env contains sensitive information (OpenAI API key) — do not commit.
 - The app is not hosted online; it runs locally.
 - AI advice is guidance only and should not be taken as professional financial advice.
 - Beginner-friendly — easy to extend with features like charts, CSV export, or category analysis.
 
-License
+## License
 This project is open-source and licensed under the MIT License.
