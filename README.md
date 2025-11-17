@@ -80,7 +80,7 @@ This project contributes to the following **Sustainable Development Goals (SDGs)
 1. Start your MySQL server.
 2. Run the schema SQL file to create the database and table:
     mysql -u root -p < schema.sql
-    # Enter password: R00t
+    Enter password: R00t
 
 ## Running the App
 1. Start Flask:
